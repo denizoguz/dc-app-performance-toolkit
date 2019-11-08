@@ -2066,7 +2066,7 @@ vars.put(&quot;extend_action&quot;, extend_action);
               </hashTree>
             </hashTree>
           </hashTree>
-          <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="browse subcomponents" enabled="false">
+          <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="browse subcomponents" enabled="true">
             <intProp name="ThroughputController.style">1</intProp>
             <boolProp name="ThroughputController.perThread">false</boolProp>
             <intProp name="ThroughputController.maxThroughput">1</intProp>
@@ -2182,7 +2182,7 @@ vars.put(&quot;extend_action&quot;, extend_action);
               </hashTree>
             </hashTree>
           </hashTree>
-          <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="get subcomponents" enabled="false">
+          <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="get subcomponents" enabled="true">
             <intProp name="ThroughputController.style">1</intProp>
             <boolProp name="ThroughputController.perThread">false</boolProp>
             <intProp name="ThroughputController.maxThroughput">1</intProp>
@@ -2226,7 +2226,7 @@ vars.put(&quot;extend_action&quot;, extend_action);
               </hashTree>
             </hashTree>
           </hashTree>
-          <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="browse subprojects" enabled="false">
+          <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="browse subprojects" enabled="true">
             <intProp name="ThroughputController.style">1</intProp>
             <boolProp name="ThroughputController.perThread">false</boolProp>
             <intProp name="ThroughputController.maxThroughput">1</intProp>
@@ -2342,7 +2342,7 @@ vars.put(&quot;extend_action&quot;, extend_action);
               </hashTree>
             </hashTree>
           </hashTree>
-          <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="get subprojects" enabled="false">
+          <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="get subprojects" enabled="true">
             <intProp name="ThroughputController.style">1</intProp>
             <boolProp name="ThroughputController.perThread">false</boolProp>
             <intProp name="ThroughputController.maxThroughput">1</intProp>
