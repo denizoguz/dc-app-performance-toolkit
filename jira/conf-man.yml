@@ -4,14 +4,14 @@ settings:
   aggregator: consolidator
   verbose: false
   env:
-    application_hostname: jira-cluster # Jira DC hostname without protocol and port e.g. test-jira.atlassian.com or localhost
+    application_hostname: confm-loadb-1sca6nev0dfae-1490662739.us-east-2.elb.amazonaws.com   # Jira DC hostname without protocol and port e.g. test-jira.atlassian.com or localhost
     application_protocol: http      # http or https
-    application_port: 8080            # 80, 443, 8080, 2990, etc
+    application_port: # 80, 443, 8080, 2990, etc
     application_postfix:           # e.g. /jira in case of url like http://localhost:2990/jira
     admin_login: admin
     admin_password: admin
-    concurrency: 70
-    test_duration: 2m
+    concurrency: 200
+    test_duration: 45m
     WEBDRIVER_VISIBLE: False
     JMETER_VERSION: 5.1
 services:
@@ -50,8 +50,9 @@ scenarios:
       perc_search_jql: 6
       perc_browse_subcomponent: 7
       perc_browse_subproject: 3
-      perc_get_subcomponent: 24
-      perc_get_subproject: 10
+      perc_get_subcomponent: 22
+      perc_get_subproject: 11
+      perc_browse_version_hierarchy: 3
 modules:
   consolidator:
     rtimes-len: 0 # CONFSRVDEV-7631 reduce sampling
