@@ -717,7 +717,7 @@
                 <stringProp name="HTTPSampler.port"></stringProp>
                 <stringProp name="HTTPSampler.protocol"></stringProp>
                 <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
-                <stringProp name="HTTPSampler.path">rest/com.deniz.jira.mapping/latest/componentHierarchy?projectKey=${cv_project_key}&amp;projectId=${cv_project_id}}&amp;allComponentsAreChildren=true&amp;selectedComponentIds=${cv_component_id}</stringProp>
+                <stringProp name="HTTPSampler.path">rest/com.deniz.jira.mapping/latest/componentHierarchy?projectKey=${cv_project_key}&amp;projectId=${cv_project_id}&amp;allComponentsAreChildren=true&amp;selectedComponentIds=${cv_component_id}</stringProp>
                 <stringProp name="HTTPSampler.method">GET</stringProp>
                 <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
                 <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
