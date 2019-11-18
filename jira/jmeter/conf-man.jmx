@@ -1281,10 +1281,10 @@ vars.put(&quot;extend_action&quot;, extend_action);
               <hashTree>
                 <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
                   <collectionProp name="Asserion.test_strings">
-                    <stringProp name="2914">[]</stringProp>
+                    <stringProp name="49586">200</stringProp>
                   </collectionProp>
                   <stringProp name="Assertion.custom_message"></stringProp>
-                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
                   <boolProp name="Assertion.assume_success">false</boolProp>
                   <intProp name="Assertion.test_type">8</intProp>
                 </ResponseAssertion>
@@ -1363,7 +1363,7 @@ vars.put(&quot;extend_action&quot;, extend_action);
                   <collectionProp name="Arguments.arguments">
                     <elementProp name="" elementType="HTTPArgument">
                       <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                      <stringProp name="Argument.value">{&quot;description&quot;:&quot;Test description&quot;,&quot;startDateStr&quot;:&quot;2019-11-01&quot;,&quot;releaseDateStr&quot;:&quot;2019-11-29&quot;,&quot;versionId&quot;:${p_version_id},&quot;componentId&quot;:${p_component_id}}</stringProp>
+                      <stringProp name="Argument.value">{&quot;description&quot;:&quot;jmeter Test description&quot;,&quot;startDateStr&quot;:&quot;2019-11-01&quot;,&quot;releaseDateStr&quot;:&quot;2019-11-29&quot;,&quot;versionId&quot;:${p_version_id},&quot;componentId&quot;:${p_component_id}}</stringProp>
                       <stringProp name="Argument.metadata">=</stringProp>
                     </elementProp>
                   </collectionProp>
@@ -1661,7 +1661,7 @@ vars.put(&quot;extend_action&quot;, extend_action);
               </hashTree>
             </hashTree>
           </hashTree>
-          <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="browse bundle" enabled="true">
+          <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="browse bundle" enabled="false">
             <intProp name="ThroughputController.style">1</intProp>
             <boolProp name="ThroughputController.perThread">false</boolProp>
             <intProp name="ThroughputController.maxThroughput">1</intProp>
