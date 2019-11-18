@@ -103,7 +103,7 @@
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -200,7 +200,7 @@
             </elementProp>
             <elementProp name="perc_edit_issue" elementType="Argument">
               <stringProp name="Argument.name">perc_edit_issue</stringProp>
-              <stringProp name="Argument.value">${__P(perc_edit_issue, 100)}</stringProp>
+              <stringProp name="Argument.value">${__P(perc_edit_issue, 0)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="perc_add_comment" elementType="Argument">
@@ -10784,7 +10784,7 @@ vars.put(&quot;extend_action&quot;, extend_action);
             </IncludeController>
             <hashTree/>
           </hashTree>
-          <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="standalone extension" enabled="true">
+          <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="standalone extension" enabled="false">
             <intProp name="ThroughputController.style">1</intProp>
             <boolProp name="ThroughputController.perThread">false</boolProp>
             <intProp name="ThroughputController.maxThroughput">1</intProp>
