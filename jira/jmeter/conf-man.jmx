@@ -1661,7 +1661,7 @@ vars.put(&quot;extend_action&quot;, extend_action);
               </hashTree>
             </hashTree>
           </hashTree>
-          <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="browse bundle" enabled="false">
+          <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="browse bundle" enabled="true">
             <intProp name="ThroughputController.style">1</intProp>
             <boolProp name="ThroughputController.perThread">false</boolProp>
             <intProp name="ThroughputController.maxThroughput">1</intProp>
@@ -1703,7 +1703,7 @@ vars.put(&quot;extend_action&quot;, extend_action);
                 </ResponseAssertion>
                 <hashTree/>
               </hashTree>
-              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="620 /rest/com.deniz.jira.mapping/latest/bundles/progress?projectKey=&lt;b_project_key&gt;" enabled="true">
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="620 /rest/com.deniz.jira.mapping/latest/bundles/progress?projectKey=&lt;b_project_key&gt;" enabled="false">
                 <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                   <collectionProp name="Arguments.arguments"/>
                 </elementProp>
