@@ -1105,7 +1105,7 @@ JMeterUtils.setProperty(&quot;c_AtlToken&quot; + user_counter, atl_token)
           </com.blazemeter.jmeter.RandomCSVDataSetConfig>
           <hashTree/>
           <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="virtual_projects" enabled="true">
-            <stringProp name="filename">/Users/starscream/IdeaProjects/Jira/DataCenterTest/dc-app-performance-toolkit/jira/datasets/virtual_projects.csv</stringProp>
+            <stringProp name="filename">datasets/virtual_projects.csv</stringProp>
             <stringProp name="fileEncoding">UTF-8</stringProp>
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="variableNames">vp_id, vp_name</stringProp>
@@ -1116,7 +1116,7 @@ JMeterUtils.setProperty(&quot;c_AtlToken&quot; + user_counter, atl_token)
           </com.blazemeter.jmeter.RandomCSVDataSetConfig>
           <hashTree/>
           <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="virtual_components" enabled="true">
-            <stringProp name="filename">/Users/starscream/IdeaProjects/Jira/DataCenterTest/dc-app-performance-toolkit/jira/datasets/virtual_components.csv</stringProp>
+            <stringProp name="filename">datasets/virtual_components.csv</stringProp>
             <stringProp name="fileEncoding">UTF-8</stringProp>
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="variableNames">vc_name</stringProp>
@@ -1127,7 +1127,7 @@ JMeterUtils.setProperty(&quot;c_AtlToken&quot; + user_counter, atl_token)
           </com.blazemeter.jmeter.RandomCSVDataSetConfig>
           <hashTree/>
           <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="version_hierarchy" enabled="true">
-            <stringProp name="filename">/Users/starscream/IdeaProjects/Jira/DataCenterTest/dc-app-performance-toolkit/jira/datasets/conf_man_version_hierarchy.csv</stringProp>
+            <stringProp name="filename">datasets/conf_man_version_hierarchy.csv</stringProp>
             <stringProp name="fileEncoding">UTF-8</stringProp>
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="variableNames">vh_project_key,vh_version_id,vh_version_name</stringProp>
