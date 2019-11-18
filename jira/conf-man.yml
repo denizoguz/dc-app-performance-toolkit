@@ -41,17 +41,17 @@ scenarios:
       application_postfix: ${application_postfix}
       # Workload model
       total_actions_per_hr: 54500
-      perc_create_component_version: 5
-      perc_browse_component_version: 12
-      perc_use_component_version: 22
+      perc_create_component_version: 4
+      perc_browse_component_version: 9
+      perc_use_component_version: 27
       perc_create_bundle: 3
       perc_browse_bundle: 6
       perc_browse_release_notes: 2
       perc_search_jql: 6
       perc_browse_subcomponent: 7
       perc_browse_subproject: 3
-      perc_get_subcomponent: 22
-      perc_get_subproject: 11
+      perc_get_subcomponent: 20
+      perc_get_subproject: 10
       perc_browse_version_hierarchy: 3
 modules:
   consolidator:
