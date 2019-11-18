@@ -1109,7 +1109,7 @@ JMeterUtils.setProperty(&quot;c_AtlToken&quot; + user_counter, atl_token)
             <stringProp name="filename">datasets/conf_man_comp_versions.csv</stringProp>
             <stringProp name="fileEncoding">UTF-8</stringProp>
             <stringProp name="delimiter">,</stringProp>
-            <stringProp name="variableNames">cv_id,project_id,cv_project_key,cv_component_id,cv_version_id</stringProp>
+            <stringProp name="variableNames">cv_id,cv_project_id,cv_project_key,cv_component_id,cv_version_id</stringProp>
             <boolProp name="randomOrder">false</boolProp>
             <boolProp name="ignoreFirstLine">false</boolProp>
             <boolProp name="rewindOnTheEndOfList">true</boolProp>
