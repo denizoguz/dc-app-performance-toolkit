@@ -30,6 +30,8 @@ execution:
     runner: pytest
     hold-for: ${test_duration}
 scenarios:
+  selenium:
+    script: selenium_ui/jira-ui.py
   jmeter:
     script: jmeter/conf-man.jmx
     properties:
