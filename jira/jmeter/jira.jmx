@@ -1105,6 +1105,17 @@ JMeterUtils.setProperty(&quot;c_AtlToken&quot; + user_counter, atl_token)
             <boolProp name="independentListPerThread">false</boolProp>
           </com.blazemeter.jmeter.RandomCSVDataSetConfig>
           <hashTree/>
+          <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="conf_man_comp_versions" enabled="true">
+            <stringProp name="filename">/Users/starscream/IdeaProjects/Jira/DataCenterTest/dc-app-performance-toolkit/jira/datasets/conf_man_comp_versions.csv</stringProp>
+            <stringProp name="fileEncoding">UTF-8</stringProp>
+            <stringProp name="delimiter">,</stringProp>
+            <stringProp name="variableNames">cv_id,project_id,cv_project_key,cv_component_id,cv_version_id</stringProp>
+            <boolProp name="randomOrder">false</boolProp>
+            <boolProp name="ignoreFirstLine">false</boolProp>
+            <boolProp name="rewindOnTheEndOfList">true</boolProp>
+            <boolProp name="independentListPerThread">false</boolProp>
+          </com.blazemeter.jmeter.RandomCSVDataSetConfig>
+          <hashTree/>
           <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="scrum boards" enabled="true">
             <stringProp name="filename">datasets/scrum-boards.csv</stringProp>
             <stringProp name="fileEncoding">UTF-8</stringProp>

@@ -429,7 +429,7 @@
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
         <hashTree/>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_view_issue" enabled="false">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_view_issue" enabled="true">
           <stringProp name="IfController.condition">${__groovy(&quot;${extend_action}&quot; == &quot;view_issue&quot;)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
@@ -437,7 +437,7 @@
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="conf_man_settings" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
-            <boolProp name="TransactionController.parent">true</boolProp>
+            <boolProp name="TransactionController.parent">false</boolProp>
           </TransactionController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="conf_man_general_settings" enabled="true">
@@ -638,7 +638,7 @@
           </hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="conf_man_view_issue" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
-            <boolProp name="TransactionController.parent">true</boolProp>
+            <boolProp name="TransactionController.parent">false</boolProp>
           </TransactionController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="conf_man_component_versions" enabled="true">
@@ -769,7 +769,7 @@
             </hashTree>
           </hashTree>
         </hashTree>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_view_project_summary" enabled="false">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_view_project_summary" enabled="true">
           <stringProp name="IfController.condition">${__groovy(&quot;${extend_action}&quot; == &quot;view_project_summary&quot;)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
@@ -777,7 +777,7 @@
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="conf_man_settings" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
-            <boolProp name="TransactionController.parent">true</boolProp>
+            <boolProp name="TransactionController.parent">false</boolProp>
           </TransactionController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="conf_man_general_settings" enabled="true">
@@ -983,7 +983,7 @@
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
         <hashTree/>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_edit_issue" enabled="false">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_edit_issue" enabled="true">
           <stringProp name="IfController.condition">${__groovy(&quot;${extend_action}&quot; == &quot;edit_issue&quot;)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
@@ -991,7 +991,7 @@
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="conf_man_settings" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
-            <boolProp name="TransactionController.parent">true</boolProp>
+            <boolProp name="TransactionController.parent">false</boolProp>
           </TransactionController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="conf_man_general_settings" enabled="true">
@@ -1192,7 +1192,7 @@
           </hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="conf_man_edit_issue" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
-            <boolProp name="TransactionController.parent">true</boolProp>
+            <boolProp name="TransactionController.parent">false</boolProp>
           </TransactionController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="conf_man_component_versions" enabled="true">
@@ -1266,7 +1266,7 @@
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
         <hashTree/>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_view_kanban_board" enabled="false">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_view_kanban_board" enabled="true">
           <stringProp name="IfController.condition">${__groovy(&quot;${extend_action}&quot; == &quot;view_kanban_board&quot;)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
@@ -1274,7 +1274,7 @@
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="conf_man_settings" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
-            <boolProp name="TransactionController.parent">true</boolProp>
+            <boolProp name="TransactionController.parent">false</boolProp>
           </TransactionController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="conf_man_general_settings" enabled="true">
@@ -1475,7 +1475,7 @@
           </hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="conf_man_view_board_backlog" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
-            <boolProp name="TransactionController.parent">true</boolProp>
+            <boolProp name="TransactionController.parent">false</boolProp>
           </TransactionController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="conf_man_component_versions" enabled="true">
@@ -1537,7 +1537,7 @@
             </hashTree>
           </hashTree>
         </hashTree>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_view_scrum_board" enabled="false">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_view_scrum_board" enabled="true">
           <stringProp name="IfController.condition">${__groovy(&quot;${extend_action}&quot; == &quot;view_scrum_board&quot;)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
@@ -1545,7 +1545,7 @@
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="conf_man_settings" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
-            <boolProp name="TransactionController.parent">true</boolProp>
+            <boolProp name="TransactionController.parent">false</boolProp>
           </TransactionController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="conf_man_general_settings" enabled="true">
@@ -1746,7 +1746,7 @@
           </hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="conf_man_view_board_backlog" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
-            <boolProp name="TransactionController.parent">true</boolProp>
+            <boolProp name="TransactionController.parent">false</boolProp>
           </TransactionController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="conf_man_component_versions" enabled="true">
@@ -1808,7 +1808,7 @@
             </hashTree>
           </hashTree>
         </hashTree>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_view_backlog" enabled="false">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_view_backlog" enabled="true">
           <stringProp name="IfController.condition">${__groovy(&quot;${extend_action}&quot; == &quot;view_backlog&quot;)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
@@ -1816,7 +1816,7 @@
         <hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="conf_man_settings" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
-            <boolProp name="TransactionController.parent">true</boolProp>
+            <boolProp name="TransactionController.parent">false</boolProp>
           </TransactionController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="conf_man_general_settings" enabled="true">
@@ -2017,7 +2017,7 @@
           </hashTree>
           <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="conf_man_view_board_backlog" enabled="true">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
-            <boolProp name="TransactionController.parent">true</boolProp>
+            <boolProp name="TransactionController.parent">false</boolProp>
           </TransactionController>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="conf_man_component_versions" enabled="true">
