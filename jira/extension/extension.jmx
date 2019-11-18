@@ -289,7 +289,7 @@
               <intProp name="ThroughputController.maxThroughput">1</intProp>
               <FloatProperty>
                 <name>ThroughputController.percentThroughput</name>
-                <value>0.2</value>
+                <value>20.0</value>
                 <savedValue>0.0</savedValue>
               </FloatProperty>
             </ThroughputController>
@@ -358,7 +358,7 @@
               <intProp name="ThroughputController.maxThroughput">1</intProp>
               <FloatProperty>
                 <name>ThroughputController.percentThroughput</name>
-                <value>0.1</value>
+                <value>10.0</value>
                 <savedValue>0.0</savedValue>
               </FloatProperty>
             </ThroughputController>
@@ -371,7 +371,7 @@
                 <stringProp name="HTTPSampler.port"></stringProp>
                 <stringProp name="HTTPSampler.protocol"></stringProp>
                 <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
-                <stringProp name="HTTPSampler.path">rest/com.deniz.jira.mapping/latest/componentHierarchy?projectKey=${cv_project_key}&amp;projectId=${cv_project_id}}&amp;allComponentsAreChildren=true&amp;selectedComponentIds=${cv_component_id}</stringProp>
+                <stringProp name="HTTPSampler.path">rest/com.deniz.jira.mapping/latest/componentHierarchy?projectKey=${cv_project_key}&amp;projectId=${cv_project_id}&amp;allComponentsAreChildren=true&amp;selectedComponentIds=${cv_component_id}</stringProp>
                 <stringProp name="HTTPSampler.method">GET</stringProp>
                 <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
                 <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
