@@ -1218,7 +1218,7 @@ vars.put(&quot;extend_action&quot;, extend_action);
             </JSR223PreProcessor>
             <hashTree/>
           </hashTree>
-          <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="create/edit/delete component version" enabled="true">
+          <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="create/edit/delete component version" enabled="false">
             <intProp name="ThroughputController.style">1</intProp>
             <boolProp name="ThroughputController.perThread">false</boolProp>
             <intProp name="ThroughputController.maxThroughput">1</intProp>
@@ -1291,7 +1291,7 @@ vars.put(&quot;extend_action&quot;, extend_action);
                 <hashTree/>
               </hashTree>
             </hashTree>
-            <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="jmeter_create_component_version" enabled="false">
+            <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="jmeter_create_component_version" enabled="true">
               <boolProp name="TransactionController.includeTimers">false</boolProp>
               <boolProp name="TransactionController.parent">true</boolProp>
             </TransactionController>
