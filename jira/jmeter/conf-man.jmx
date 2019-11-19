@@ -184,7 +184,7 @@
             </elementProp>
             <elementProp name="perc_browse_component_version" elementType="Argument">
               <stringProp name="Argument.name">perc_browse_component_version</stringProp>
-              <stringProp name="Argument.value">${__P(perc_browse_component_version, 100)}</stringProp>
+              <stringProp name="Argument.value">${__P(perc_browse_component_version, 0)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="perc_use_component_version" elementType="Argument">
@@ -1780,7 +1780,37 @@ vars.put(&quot;extend_action&quot;, extend_action);
               <hashTree>
                 <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
                   <collectionProp name="Asserion.test_strings">
-                    <stringProp name="1907985251">.+&quot;\d+&quot;:{&quot;doneCount&quot;:\d+,&quot;inProgressCount&quot;:\d+,&quot;todoCount&quot;:\d+}.+</stringProp>
+                    <stringProp name="-1686571460">{&quot;doneCount&quot;:\d+,&quot;inProgressCount&quot;:\d+,&quot;todoCount&quot;:\d+}</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.custom_message"></stringProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">1</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="625 /rest/com.deniz.jira.mapping/latest/bundles/&lt;b_bundle_id&gt;/progress/components" enabled="true">
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                  <collectionProp name="Arguments.arguments"/>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+                <stringProp name="HTTPSampler.path">${application.postfix}/rest/com.deniz.jira.mapping/latest/bundles/${b_bundle_id}/progress/components</stringProp>
+                <stringProp name="HTTPSampler.method">GET</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="1301416412">.+{&quot;doneCount&quot;:\d+,&quot;inProgressCount&quot;:\d+,&quot;todoCount&quot;:\d+}.+</stringProp>
                   </collectionProp>
                   <stringProp name="Assertion.custom_message"></stringProp>
                   <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
