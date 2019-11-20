@@ -10,8 +10,8 @@ settings:
     application_postfix:           # e.g. /jira in case of url like http://localhost:2990/jira
     admin_login: admin
     admin_password: admin
-    concurrency: 200
-    test_duration: 45m
+    concurrency: 350
+    test_duration: 25m
     WEBDRIVER_VISIBLE: False
     JMETER_VERSION: 5.1
 services:
@@ -40,7 +40,7 @@ scenarios:
       application_port: ${application_port}
       application_postfix: ${application_postfix}
       # Workload model
-      total_actions_per_hr: 54500
+      total_actions_per_hr: 109000
       perc_create_component_version: 4
       perc_browse_component_version: 9
       perc_use_component_version: 27
