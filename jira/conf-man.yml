@@ -40,7 +40,7 @@ scenarios:
       application_port: ${application_port}
       application_postfix: ${application_postfix}
       # Workload model
-      total_actions_per_hr: 109000
+      total_actions_per_hr: 65000
       perc_create_component_version: 4
       perc_browse_component_version: 9
       perc_use_component_version: 27
