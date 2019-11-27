@@ -14,7 +14,7 @@
     <hashTree>
       <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="extension" enabled="false"/>
       <hashTree>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_create_issue" enabled="true">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_create_issue" enabled="false">
           <stringProp name="IfController.condition">${__groovy(&quot;${extend_action}&quot; == &quot;create_issue&quot;)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
@@ -429,7 +429,7 @@
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
         <hashTree/>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_view_issue" enabled="true">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_view_issue" enabled="false">
           <stringProp name="IfController.condition">${__groovy(&quot;${extend_action}&quot; == &quot;view_issue&quot;)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
@@ -769,7 +769,7 @@
             </hashTree>
           </hashTree>
         </hashTree>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_view_project_summary" enabled="true">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_view_project_summary" enabled="false">
           <stringProp name="IfController.condition">${__groovy(&quot;${extend_action}&quot; == &quot;view_project_summary&quot;)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
@@ -983,7 +983,7 @@
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
         <hashTree/>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_edit_issue" enabled="true">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_edit_issue" enabled="false">
           <stringProp name="IfController.condition">${__groovy(&quot;${extend_action}&quot; == &quot;edit_issue&quot;)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
@@ -1266,7 +1266,7 @@
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
         <hashTree/>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_view_kanban_board" enabled="true">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_view_kanban_board" enabled="false">
           <stringProp name="IfController.condition">${__groovy(&quot;${extend_action}&quot; == &quot;view_kanban_board&quot;)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
@@ -1537,7 +1537,7 @@
             </hashTree>
           </hashTree>
         </hashTree>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_view_scrum_board" enabled="true">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_view_scrum_board" enabled="false">
           <stringProp name="IfController.condition">${__groovy(&quot;${extend_action}&quot; == &quot;view_scrum_board&quot;)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
@@ -1808,7 +1808,7 @@
             </hashTree>
           </hashTree>
         </hashTree>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_view_backlog" enabled="true">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="extend_view_backlog" enabled="false">
           <stringProp name="IfController.condition">${__groovy(&quot;${extend_action}&quot; == &quot;view_backlog&quot;)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
