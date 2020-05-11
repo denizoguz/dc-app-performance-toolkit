@@ -10,10 +10,14 @@ import sys
 import time
 from pathlib import Path
 
+from os import listdir
+from os.path import isfile, join
+
 import pytest
 import yaml
 from selenium.webdriver import Chrome
 from selenium.webdriver.chrome.options import Options
+
 
 SCREEN_WIDTH = 1920
 SCREEN_HEIGHT = 1080
@@ -166,17 +170,16 @@ def datasets():
     else:
         data_sets = dict()
         input_data_path = Path(__file__).parents[1] / "datasets"
+        (_, _, filenames) = next(os.walk(input_data_path))
 
         def read_input_file(file_name):
             with open(input_data_path / file_name, 'r') as f:
                 reader = csv.reader(f)
                 return list(reader)
 
-        data_sets["issues"] = read_input_file("issues.csv")
-        data_sets["users"] = read_input_file("users.csv")
-        data_sets["jqls"] = read_input_file("jqls.csv")
-        data_sets["scrum_boards"] = read_input_file("scrum-boards.csv")
-        data_sets["kanban_boards"] = read_input_file("kanban-boards.csv")
+        for f in filenames:
+            data_sets[f.replace("-", "_").replace(".csv", "")] = read_input_file(f)
+
         return data_sets
 
 

@@ -51,6 +51,8 @@ def login(webdriver, datasets):
             webdriver.get(f'{APPLICATION_URL}/secure/Dashboard.jspa')
 
         user = random.choice(datasets["users"])
+        print(user)
+
         webdriver.find_element_by_id('login-form-username').send_keys(user[0])
         webdriver.find_element_by_id('login-form-password').send_keys(user[1])
 

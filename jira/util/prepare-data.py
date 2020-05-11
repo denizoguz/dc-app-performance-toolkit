@@ -95,7 +95,6 @@ def main():
     dataset["boards"] = jira_api.get_boards(type='scrum', maxResults=250) \
                         + jira_api.get_boards(type='kanban', maxResults=250)
 
-
     perf_users = jira_api.get_users(username=DEFAULT_USER_PREFIX, maxResults=performance_users_count)
     dataset["users"] = generate_perf_users(api=jira_api, cur_perf_user=perf_users)
 
