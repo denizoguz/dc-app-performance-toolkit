@@ -9,19 +9,19 @@ from jira.selenium_ui.conftest import print_timing, AnyEc, application_url, gene
 from jira.selenium_ui.modules import _wait_until
 
 APPLICATION_URL = application_url()
-timeout = 20
+timeout = 60
 
 
 def log_work(webdriver, datasets):
     @print_timing
     def measure(webdriver, interaction):
         # open log work dialog
-        WebDriverWait(webdriver, timeout).until(EC.visibility_of_element_located((By.ID, 'add-worklog-issue-right-panel-link')), interaction, 60)
+        WebDriverWait(webdriver, timeout).until(EC.visibility_of_element_located((By.ID, 'add-worklog-issue-right-panel-link')), interaction)
 
         @print_timing
         def measure(webdriver, interaction):
             webdriver.find_element_by_id('add-worklog-issue-right-panel-link').click()
-            WebDriverWait(webdriver, timeout).until(EC.visibility_of_element_located((By.ID, 'add-worklog-dialog-timesheet')), interaction, 60)
+            WebDriverWait(webdriver, timeout).until(EC.visibility_of_element_located((By.ID, 'add-worklog-dialog-timesheet')), interaction)
         measure(webdriver, "selenium_create_worklog:open_log_work_dialog")
 
         # create worklog
@@ -32,7 +32,7 @@ def log_work(webdriver, datasets):
             logWorkButton = webdriver.find_element_by_id('worklogpro-log-work-submit')
             logWorkButton.click()
 
-            WebDriverWait(webdriver, timeout).until(EC.invisibility_of_element_located((By.ID, 'add-worklog-dialog-timesheet')), interaction, 60)
+            WebDriverWait(webdriver, timeout).until(EC.invisibility_of_element_located((By.ID, 'add-worklog-dialog-timesheet')), interaction)
 
         measure(webdriver, "selenium_create_issue:fill_and_submit_log_work_form")
 
