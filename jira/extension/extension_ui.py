@@ -16,12 +16,12 @@ def log_work(webdriver, datasets):
     @print_timing
     def measure(webdriver, interaction):
         # open log work dialog
-        WebDriverWait(webdriver, timeout).until(EC.visibility_of_element_located((By.ID, 'add-worklog-issue-right-panel-link')), interaction)
+        WebDriverWait(webdriver, timeout).until(EC.visibility_of_element_located((By.ID, 'add-worklog-issue-right-panel-link')), interaction, 60)
 
         @print_timing
         def measure(webdriver, interaction):
             webdriver.find_element_by_id('add-worklog-issue-right-panel-link').click()
-            WebDriverWait(webdriver, timeout).until(EC.visibility_of_element_located((By.ID, 'add-worklog-dialog-timesheet')), interaction)
+            WebDriverWait(webdriver, timeout).until(EC.visibility_of_element_located((By.ID, 'add-worklog-dialog-timesheet')), interaction, 60)
         measure(webdriver, "selenium_create_worklog:open_log_work_dialog")
 
         # create worklog
@@ -32,7 +32,7 @@ def log_work(webdriver, datasets):
             logWorkButton = webdriver.find_element_by_id('worklogpro-log-work-submit')
             logWorkButton.click()
 
-            WebDriverWait(webdriver, timeout).until(EC.invisibility_of_element_located((By.ID, 'add-worklog-dialog-timesheet')), interaction)
+            WebDriverWait(webdriver, timeout).until(EC.invisibility_of_element_located((By.ID, 'add-worklog-dialog-timesheet')), interaction, 60)
 
         measure(webdriver, "selenium_create_issue:fill_and_submit_log_work_form")
 
@@ -48,7 +48,7 @@ def view_weekly_user_ts(webdriver, datasets):
     @print_timing
     def measure(webdriver, interaction):
         webdriver.get(f'{APPLICATION_URL}/secure/WPShowTimesheetAction!customTimesheet.jspa?periodMode=WEEK&targetType=USER&calendarType=CUSTOM&groupingType=ISSUE#targetType=USER&targetKey={username}&groupingType=Issue&periodMode=WEEK&startDate={start_date}&endDate={end_date}&periodLocked=false&calendarType=CUSTOM&saveToUserHistory=false&extraIssueFilter=&viewType=TIMESHEET')
-        _wait_until(webdriver, EC.visibility_of_element_located((By.CLASS_NAME, "last_day")), interaction)
+        _wait_until(webdriver, EC.visibility_of_element_located((By.CLASS_NAME, "last_day")), interaction, 60)
     measure(webdriver, "selenium_view_weekly_user_ts")
 
 
@@ -61,7 +61,7 @@ def view_monthly_user_ts(webdriver, datasets):
     @print_timing
     def measure(webdriver, interaction):
         webdriver.get(f'{APPLICATION_URL}/secure/WPShowTimesheetAction!customTimesheet.jspa?periodMode=MONTH&targetType=USER&calendarType=CUSTOM&groupingType=ISSUE#targetType=USER&targetKey={username}&groupingType=Issue&periodMode=MONTH&startDate={start_date}&endDate={end_date}&periodLocked=false&calendarType=CUSTOM&saveToUserHistory=false&extraIssueFilter=&viewType=TIMESHEET')
-        _wait_until(webdriver, EC.visibility_of_element_located((By.CLASS_NAME, "last_day")), interaction)
+        _wait_until(webdriver, EC.visibility_of_element_located((By.CLASS_NAME, "last_day")), interaction, 60)
     measure(webdriver, "selenium_view_monthly_user_ts")
 
 
@@ -74,7 +74,7 @@ def view_weekly_project_ts(webdriver, datasets):
     @print_timing
     def measure(webdriver, interaction):
         webdriver.get(f'{APPLICATION_URL}/secure/WPShowTimesheetAction!customTimesheet.jspa?periodMode=WEEK&targetType=PROJECT&calendarType=CUSTOM&groupingType=ISSUE#targetType=PROJECT&targetKey={project_key}&groupingType=Issue&periodMode=WEEK&startDate={start_date}&endDate={end_date}&periodLocked=false&calendarType=CUSTOM&saveToUserHistory=false&extraIssueFilter=&viewType=TIMESHEET')
-        _wait_until(webdriver, EC.visibility_of_element_located((By.CLASS_NAME, "last_day")), interaction)
+        _wait_until(webdriver, EC.visibility_of_element_located((By.CLASS_NAME, "last_day")), interaction, 60)
     measure(webdriver, "selenium_view_weekly_project_ts")
 
 
@@ -87,6 +87,6 @@ def view_monthly_project_ts(webdriver, datasets):
     @print_timing
     def measure(webdriver, interaction):
         webdriver.get(f'{APPLICATION_URL}/secure/WPShowTimesheetAction!customTimesheet.jspa?periodMode=MONTH&targetType=PROJECT&calendarType=CUSTOM&groupingType=ISSUE#targetType=PROJECT&targetKey={project_key}&groupingType=Issue&periodMode=MONTH&startDate={start_date}&endDate={end_date}&periodLocked=false&calendarType=CUSTOM&saveToUserHistory=false&extraIssueFilter=&viewType=TIMESHEET')
-        _wait_until(webdriver, EC.visibility_of_element_located((By.CLASS_NAME, "last_day")), interaction)
+        _wait_until(webdriver, EC.visibility_of_element_located((By.CLASS_NAME, "last_day")), interaction, 60)
     measure(webdriver, "selenium_view_monthly_project_ts")
 
