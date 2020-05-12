@@ -95,6 +95,10 @@ def print_timing(func):
 
     return wrapper
 
+@pytest.fixture
+def selenium(selenium):
+    selenium.implicitly_wait(60)
+    return selenium
 
 @pytest.fixture(scope="module")
 def webdriver():
