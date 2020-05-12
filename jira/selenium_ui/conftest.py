@@ -95,11 +95,6 @@ def print_timing(func):
 
     return wrapper
 
-@pytest.fixture
-def selenium(selenium):
-    selenium.implicitly_wait(60)
-    return selenium
-
 @pytest.fixture(scope="module")
 def webdriver():
     global driver
@@ -114,6 +109,7 @@ def webdriver():
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-infobars")
         driver = Chrome(options=chrome_options)
+        driver.implicitly_wait(60)
         return driver
 
 
