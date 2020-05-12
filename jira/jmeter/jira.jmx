@@ -253,11 +253,6 @@
               <stringProp name="Argument.value">${__P(perc_standalone_extension, 0)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
-            <elementProp name="perc_view_weekly_project_timesheet" elementType="Argument">
-              <stringProp name="Argument.name">perc_view_weekly_project_timesheet</stringProp>
-              <stringProp name="Argument.value">${__P(perc_view_weekly_project_timesheet, 0)}</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
           </collectionProp>
         </Arguments>
         <hashTree/>
