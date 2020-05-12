@@ -10,7 +10,7 @@ settings:
     application_postfix:          # e.g. /jira in case of url like http://localhost:2990/jira
     admin_login: admin
     admin_password: admin
-    concurrency: 10
+    concurrency: 200
     test_duration: 45m
     WEBDRIVER_VISIBLE: False
     JMETER_VERSION: 5.1
@@ -24,7 +24,7 @@ execution:
   - scenario: jmeter
     concurrency: ${concurrency}
     hold-for: ${test_duration}
-    ramp-up: 3m
+    ramp-up: 5m
   - scenario: selenium
     executor: selenium
     runner: pytest
@@ -40,7 +40,7 @@ scenarios:
       application_port: ${application_port}
       application_postfix: ${application_postfix}
       # Workload model
-      total_actions_per_hr: 5450
+      total_actions_per_hr: 54500
       perc_create_issue: 4
       perc_search_jql: 11
       perc_view_issue: 38
