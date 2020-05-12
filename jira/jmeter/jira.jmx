@@ -255,7 +255,7 @@
             </elementProp>
             <elementProp name="perc_view_weekly_project_timesheet" elementType="Argument">
               <stringProp name="Argument.name">perc_view_weekly_project_timesheet</stringProp>
-              <stringProp name="Argument.value">${__P(perc_view_monthly_weekly_timesheet, 0)}</stringProp>
+              <stringProp name="Argument.value">${__P(perc_view_weekly_project_timesheet, 0)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
@@ -10838,7 +10838,7 @@ vars.put(&quot;extend_action&quot;, extend_action);
             </IncludeController>
             <hashTree/>
           </hashTree>
-          <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="view weekly project timesheet" enabled="true">
+          <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="view weekly project timesheet" enabled="false">
             <intProp name="ThroughputController.style">1</intProp>
             <boolProp name="ThroughputController.perThread">false</boolProp>
             <intProp name="ThroughputController.maxThroughput">1</intProp>
