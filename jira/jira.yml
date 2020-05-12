@@ -54,9 +54,9 @@ scenarios:
       perc_view_backlog: 6
       perc_browse_boards: 2
       perc_view_monthly_project_timesheet: 1
-      perc_view_weekly_project_timesheet: 1
-      perc_view_weekly_user_timesheet: 2
-      perc_view_monthly_user_timesheet: 2
+#      perc_view_weekly_project_timesheet: 1
+      perc_view_weekly_user_timesheet: 4
+      perc_view_monthly_user_timesheet: 1
       perc_standalone_extension: 0 # By default disabled
 modules:
   consolidator:
