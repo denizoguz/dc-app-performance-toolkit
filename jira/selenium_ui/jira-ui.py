@@ -62,6 +62,18 @@ def test_1_selenium_view_weekly_user_ts(webdriver, datasets, screen_shots):
     view_weekly_user_ts(webdriver, datasets)
 
 
+def test_1_selenium_view_monthly_user_ts(webdriver, datasets, screen_shots):
+    view_monthly_user_ts(webdriver, datasets)
+
+
+def test_1_selenium_view_weekly_project_ts(webdriver, datasets, screen_shots):
+    view_weekly_project_ts(webdriver, datasets)
+
+
+def test_1_selenium_view_monthly_project_ts(webdriver, datasets, screen_shots):
+    view_monthly_project_ts(webdriver, datasets)
+
+
 def test_1_selenium_view_project_summary(webdriver, datasets, screen_shots):
     view_project_summary(webdriver, datasets)
 
