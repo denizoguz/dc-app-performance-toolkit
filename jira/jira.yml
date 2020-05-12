@@ -10,7 +10,7 @@ settings:
     application_postfix:          # e.g. /jira in case of url like http://localhost:2990/jira
     admin_login: admin
     admin_password: admin
-    concurrency: 200
+    concurrency: 20
     test_duration: 45m
     WEBDRIVER_VISIBLE: False
     JMETER_VERSION: 5.1
@@ -53,9 +53,9 @@ scenarios:
       perc_view_kanban_board: 3
       perc_view_backlog: 6
       perc_browse_boards: 2
-      perc_view_monthly_project_ts: 3
-      perc_view_weekly_user_ts: 5
-      perc_view_monthly_user_ts: 3
+      perc_view_monthly_project_ts: 1
+      perc_view_weekly_user_ts: 2
+      perc_view_monthly_user_ts: 1
       perc_standalone_extension: 0 # By default disabled
 modules:
   consolidator:
