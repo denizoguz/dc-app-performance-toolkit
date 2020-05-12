@@ -11,7 +11,7 @@ settings:
     admin_login: admin
     admin_password: admin
     concurrency: 200
-    test_duration: 3m
+    test_duration: 5m
     WEBDRIVER_VISIBLE: False
     JMETER_VERSION: 5.1
 services:
@@ -42,10 +42,10 @@ scenarios:
       # Workload model
       total_actions_per_hr: 54500
       perc_create_issue: 4
-      perc_search_jql: 13
-      perc_view_issue: 43
+      perc_search_jql: 11
+      perc_view_issue: 38
       perc_view_project_summary: 4
-      perc_view_dashboard: 12
+      perc_view_dashboard: 8
       perc_edit_issue: 4
       perc_add_comment: 2
       perc_browse_projects: 4
@@ -53,6 +53,9 @@ scenarios:
       perc_view_kanban_board: 3
       perc_view_backlog: 6
       perc_browse_boards: 2
+      perc_view_monthly_project_ts: 3
+      perc_view_weekly_user_ts: 5
+      perc_view_monthly_user_ts: 3
       perc_standalone_extension: 0 # By default disabled
 modules:
   consolidator:
