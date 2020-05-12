@@ -40,7 +40,7 @@ scenarios:
       application_port: ${application_port}
       application_postfix: ${application_postfix}
       # Workload model
-      total_actions_per_hr: 54500
+      total_actions_per_hr: 5450
       perc_create_issue: 4
       perc_search_jql: 11
       perc_view_issue: 38
@@ -53,9 +53,9 @@ scenarios:
       perc_view_kanban_board: 3
       perc_view_backlog: 6
       perc_browse_boards: 2
-      perc_view_monthly_project_ts: 1
-      perc_view_weekly_user_ts: 2
-      perc_view_monthly_user_ts: 1
+      perc_view_monthly_project_timesheet: 1
+      perc_view_weekly_user_timesheet: 2
+      perc_view_monthly_user_timesheet: 1
       perc_standalone_extension: 0 # By default disabled
 modules:
   consolidator:
