@@ -1611,7 +1611,7 @@ def request_body = &quot;pid=${pid}&amp;issuetype=${issuetype}&amp;atl_token=${a
                 <hashTree/>
               </hashTree>
             </hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="true">
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="false">
               <stringProp name="IncludeController.includepath">extension/extension.jmx</stringProp>
             </IncludeController>
             <hashTree/>
@@ -2538,7 +2538,7 @@ vars.put(&quot;p_request_body&quot;, p_request_body.trim());
                 </hashTree>
               </hashTree>
             </hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="true">
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="false">
               <stringProp name="IncludeController.includepath">extension/extension.jmx</stringProp>
             </IncludeController>
             <hashTree/>
@@ -3187,7 +3187,7 @@ vars.put(&quot;extend_action&quot;, extend_action);
                 <hashTree/>
               </hashTree>
             </hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="true">
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="false">
               <stringProp name="IncludeController.includepath">extension/extension.jmx</stringProp>
             </IncludeController>
             <hashTree/>
@@ -4098,7 +4098,7 @@ vars.put(&quot;extend_action&quot;, extend_action);
                 <hashTree/>
               </hashTree>
             </hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="true">
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="false">
               <stringProp name="IncludeController.includepath">extension/extension.jmx</stringProp>
             </IncludeController>
             <hashTree/>
@@ -5045,7 +5045,7 @@ vars.put(&quot;extend_action&quot;, extend_action);
                 <hashTree/>
               </hashTree>
             </hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="true">
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="false">
               <stringProp name="IncludeController.includepath">extension/extension.jmx</stringProp>
             </IncludeController>
             <hashTree/>
@@ -6276,7 +6276,7 @@ vars.put(&quot;random_string_long&quot;, random_string_long)
                 <hashTree/>
               </hashTree>
             </hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="true">
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="false">
               <stringProp name="IncludeController.includepath">extension/extension.jmx</stringProp>
             </IncludeController>
             <hashTree/>
@@ -6825,7 +6825,7 @@ vars.put(&quot;p_comment&quot;, comment.toString())
                 <hashTree/>
               </hashTree>
             </hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="true">
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="false">
               <stringProp name="IncludeController.includepath">extension/extension.jmx</stringProp>
             </IncludeController>
             <hashTree/>
@@ -7167,7 +7167,7 @@ vars.put(&quot;extend_action&quot;, extend_action);
                 <hashTree/>
               </hashTree>
             </hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="true">
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="false">
               <stringProp name="IncludeController.includepath">extension/extension.jmx</stringProp>
             </IncludeController>
             <hashTree/>
@@ -8184,7 +8184,7 @@ vars.put(&quot;extend_action&quot;, extend_action);
                 </hashTree>
               </hashTree>
             </hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="true">
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="false">
               <stringProp name="IncludeController.includepath">extension/extension.jmx</stringProp>
             </IncludeController>
             <hashTree/>
@@ -9201,7 +9201,7 @@ vars.put(&quot;extend_action&quot;, extend_action);
                 </hashTree>
               </hashTree>
             </hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="true">
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="false">
               <stringProp name="IncludeController.includepath">extension/extension.jmx</stringProp>
             </IncludeController>
             <hashTree/>
@@ -10357,7 +10357,7 @@ vars.put(&quot;extend_action&quot;, extend_action);
                 </hashTree>
               </hashTree>
             </hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="true">
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="false">
               <stringProp name="IncludeController.includepath">extension/extension.jmx</stringProp>
             </IncludeController>
             <hashTree/>
@@ -10779,7 +10779,7 @@ vars.put(&quot;extend_action&quot;, extend_action);
                 <hashTree/>
               </hashTree>
             </hashTree>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="true">
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="jmeter_extension" enabled="false">
               <stringProp name="IncludeController.includepath">extension/extension.jmx</stringProp>
             </IncludeController>
             <hashTree/>

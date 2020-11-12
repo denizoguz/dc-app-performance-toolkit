@@ -84,4 +84,5 @@ modules:
       httpsampler.ignore_failed_embedded_resources: "true"
   selenium:
     chromedriver:
-      version: "77.0.3865.40" # Supports Chrome version 77. You can refer to http://chromedriver.chromium.org/downloads
+      #this is just the driver, actual browser is /usr/bin/chromium-browser. Version of two should match.
+      version: "86.0.4240.22" # Supports Chrome version 77. You can refer to http://chromedriver.chromium.org/downloads
