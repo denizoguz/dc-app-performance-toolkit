@@ -19,7 +19,7 @@ services:
     prepare:
       - python util/prepare-data.py ${application_protocol}://${application_hostname}:${application_port}${application_postfix}
     shutdown:
-      - python util/jtl_convertor/jtls-to-csv.py kpi.jtl
+      - python util/jtl_convertor/jtls-to-csv.py kpi.jtl selenium.jtl
 execution:
   - scenario: jmeter
     concurrency: ${concurrency}
