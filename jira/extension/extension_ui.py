@@ -24,18 +24,19 @@ def view_issue_with_similar_issues(webdriver, datasets):
         sub_measure()
     measure()
 
-def custom_action(webdriver, datasets):
+def view_issue_with_similar_issues(webdriver, datasets):
     @print_timing
     def measure(webdriver, interaction):
         @print_timing
         def measure(webdriver, interaction):
-            webdriver.get(f'{APPLICATION_URL}/plugins/servlet/some-app/reporter')
-            WebDriverWait(webdriver, timeout).until(EC.visibility_of_element_located((By.ID, 'plugin-element')))
-        measure(webdriver, 'selenium_app_custom_action:view_report')
+            webdriver.get(f"{APPLICATION_URL}/browse/{issue_key}?page=com.deniz.jira.similarissues:similar-issues-tab-panel")
+            WebDriverWait(webdriver, timeout).until(EC.visibility_of_element_located((By.ID, 'summary-val')))
+            WebDriverWait(webdriver, timeout).until(EC.visibility_of_element_located((By.ID, 'similar_issue_overlay_table')))
+        measure(webdriver, 'selenium_app_custom_action:view_issue_with_sim')
 
-        @print_timing
-        def measure(webdriver, interaction):
-            webdriver.get(f'{APPLICATION_URL}/plugins/servlet/some-app/administration')
-            WebDriverWait(webdriver, timeout).until(EC.visibility_of_element_located((By.ID, 'plugin-dashboard')))
-        measure(webdriver, 'selenium_app_custom_action:view_dashboard')
+        # @print_timing
+        # def measure(webdriver, interaction):
+        #     webdriver.get(f'{APPLICATION_URL}/plugins/servlet/some-app/administration')
+        #     WebDriverWait(webdriver, timeout).until(EC.visibility_of_element_located((By.ID, 'plugin-dashboard')))
+        # measure(webdriver, 'selenium_app_custom_action:view_dashboard')
     measure(webdriver, 'selenium_app_custom_action')
