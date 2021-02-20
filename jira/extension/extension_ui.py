@@ -12,16 +12,15 @@ timeout = 20
 
 
 def view_issue_with_similar_issues(webdriver, datasets):
-    page = BasePage(webdriver)
     issue_key = datasets["issues"]
 
     @print_timing("selenium_app_custom_action")
     def measure():
         @print_timing("selenium_app_custom_action:view_issue_with_sim")
         def sub_measure():
-            page.go_to_url(f"{JIRA_SETTINGS.server_url}/browse/{issue_key}?page=com.deniz.jira.similarissues:similar-issues-tab-panel")
-            page.wait_until_visible((By.ID, "summary-val"))  # Wait for summary field visible
-            page.wait_until_visible((By.ID, "similar_issue_overlay_table"))  # Wait for you app-specific UI element by ID selector
+            webdriver.get(f"{APPLICATION_URL}/browse/{issue_key}?page=com.deniz.jira.similarissues:similar-issues-tab-panel")
+            WebDriverWait(webdriver, timeout).until(EC.visibility_of_element_located((By.ID, 'summary-val')))
+            WebDriverWait(webdriver, timeout).until(EC.visibility_of_element_located((By.ID, 'similar_issue_overlay_table')))
         sub_measure()
     measure()
 
