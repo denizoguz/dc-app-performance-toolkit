@@ -32,7 +32,7 @@ def view_issue_with_similar_issues(webdriver, datasets):
         def measure(webdriver, interaction):
             webdriver.get(f"{APPLICATION_URL}/browse/{issue_key}?page=com.deniz.jira.similarissues:similar-issues-tab-panel")
             WebDriverWait(webdriver, timeout).until(EC.visibility_of_element_located((By.ID, 'summary-val')))
-            WebDriverWait(webdriver, timeout).until(EC.visibility_of_element_located((By.ID, 'similar_issue_overlay_table')))
+            # WebDriverWait(webdriver, timeout).until(EC.visibility_of_element_located((By.ID, 'similar_issue_overlay_table')))
         measure(webdriver, 'selenium_app_custom_action:view_issue_with_sim')
 
         # @print_timing
