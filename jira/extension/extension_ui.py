@@ -25,6 +25,7 @@ def view_issue_with_similar_issues(webdriver, datasets):
     measure()
 
 def view_issue_with_similar_issues(webdriver, datasets):
+    issue_key = datasets["issues"]
     @print_timing
     def measure(webdriver, interaction):
         @print_timing
