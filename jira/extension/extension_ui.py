@@ -13,10 +13,7 @@ timeout = 20
 
 def view_issue_with_similar_issues(webdriver, datasets):
     page = BasePage(webdriver)
-    if datasets['custom_issues']:
-        issue_key = datasets['custom_issue_key']
-    else 
-        issue_key = datasets["issues"]
+    issue_key = datasets["issues"]
 
     @print_timing("selenium_app_custom_action")
     def measure():
