@@ -25,7 +25,7 @@ def view_issue_with_similar_issues(webdriver, datasets):
     measure()
 
 def view_issue_with_similar_issues(webdriver, datasets):
-    issue_key = datasets["issues"]
+    issue_key = random.choice(datasets["issues"])[0]
     @print_timing
     def measure(webdriver, interaction):
         @print_timing
