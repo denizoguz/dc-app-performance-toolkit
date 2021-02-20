@@ -58,8 +58,8 @@ def test_1_selenium_view_project_summary(webdriver, datasets, screen_shots):
 """ Add custom actions anywhere between login and log out action. Move this to a different line as needed.
     Write your custom selenium scripts in `../extension/extension.py`. Refer to `modules.py` for examples.
 """
-# def test_1_selenium_custom_action(webdriver, datasets, screen_shots):
-#     custom_action(webdriver, datasets)
+def test_1_selenium_view_issue_with_similar_issues(webdriver, datasets, screen_shots):
+    view_issue_with_similar_issues(webdriver, datasets)
 
 
 # this action should be the last one
