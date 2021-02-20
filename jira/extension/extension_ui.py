@@ -40,4 +40,4 @@ def view_issue_with_similar_issues(webdriver, datasets):
         #     webdriver.get(f'{APPLICATION_URL}/plugins/servlet/some-app/administration')
         #     WebDriverWait(webdriver, timeout).until(EC.visibility_of_element_located((By.ID, 'plugin-dashboard')))
         # measure(webdriver, 'selenium_app_custom_action:view_dashboard')
-    measure(webdriver, 'selenium_app_custom_action')
+    measure(webdriver, 'view_issue_with_similar_issues')
