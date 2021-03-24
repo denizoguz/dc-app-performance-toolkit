@@ -73,9 +73,7 @@ def view_issue_and_create_reminder(webdriver, datasets):
         def measure(webdriver, interaction):
             _wait_until(webdriver, EC.element_to_be_clickable((By.ID, "add-reminder-summary")), interaction).send_keys(f"Testing reminder creation {time.time()}")
 
-            text_description = f'Description: {generate_random_string(100)}'
-            element = webdriver.find_element_by_id('add-reminder-comment')
-            _write_to_text_area(webdriver, element, text_description, interaction)
+            _wait_until(webdriver, EC.element_to_be_clickable((By.ID, "add-reminder-comment")), interaction).send_keys(f"Description: {generate_random_string(100)} {time.time()}")
 
             _wait_until(webdriver, EC.element_to_be_clickable((By.ID, "add-reminder-date")), interaction).send_keys(f"31/Mar/29 11:04 AM")
 
