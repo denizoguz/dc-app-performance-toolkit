@@ -61,6 +61,8 @@ def test_1_selenium_view_project_summary(webdriver, datasets, screen_shots):
 # def test_1_selenium_custom_action(webdriver, datasets, screen_shots):
 #     custom_action(webdriver, datasets)
 
+def test_1_view_issue_and_create_reminder(webdriver, datasets, screen_shots):
+    view_issue_and_create_reminder(webdriver, datasets)
 
 # this action should be the last one
 def test_2_selenium_z_log_out(webdriver, datasets, screen_shots):
