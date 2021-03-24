@@ -4,6 +4,7 @@ import urllib.parse
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support import expected_conditions as EC
 from jira.selenium_ui.conftest import print_timing, AnyEc, application_url, generate_random_string
 
@@ -60,3 +61,28 @@ def view_issue_and_create_reminder(webdriver, datasets):
             measure(webdriver, "selenium_app_custom_action:create_reminder_form_submit")
         measure(webdriver, "selenium_app_custom_action:create_reminder_form_fill_and_submit")
     measure(webdriver, 'selenium_app_custom_action:create_reminder')
+
+
+def _wait_until(webdriver, expected_condition, interaction, time_out=timeout):
+    message = f"Interaction: {interaction}. "
+    ec_type = type(expected_condition)
+    if ec_type == AnyEc:
+        conditions_text = ""
+        for ecs in expected_condition.ecs:
+            conditions_text = conditions_text + " " + f"Condition: {str(ecs)} Locator: {ecs.locator}\n"
+
+        message += f"Timed out after {time_out} sec waiting for one of the conditions: \n{conditions_text}"
+
+    elif ec_type == EC.invisibility_of_element_located:
+        message += (f"Timed out after {time_out} sec waiting for {str(expected_condition)}. \n"
+                    f"Locator: {expected_condition.target}")
+
+    elif ec_type == EC.frame_to_be_available_and_switch_to_it:
+        message += (f"Timed out after {time_out} sec waiting for {str(expected_condition)}. \n"
+                    f"Locator: {expected_condition.frame_locator}")
+
+    else:
+        message += (f"Timed out after {time_out} sec waiting for {str(expected_condition)}. \n"
+                    f"Locator: {expected_condition.locator}")
+
+    return WebDriverWait(webdriver, time_out).until(expected_condition, message=message)
