@@ -11,7 +11,7 @@ settings:
     admin_login: admin
     admin_password: admin
     concurrency: 200
-    test_duration: 15m
+    test_duration: 25m
     WEBDRIVER_VISIBLE: False
     JMETER_VERSION: 5.1
 services:
@@ -85,5 +85,5 @@ modules:
   selenium:
     chromedriver:
       #this is just the driver, actual browser is /usr/bin/chromium-browser. Version of two should match.
-      version: "86.0.4240.22" # auto downloaded by bzt to .bzt folder
+      version: "89.0.4389.23" # auto downloaded by bzt to .bzt folder
 
