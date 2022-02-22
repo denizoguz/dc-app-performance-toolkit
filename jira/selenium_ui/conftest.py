@@ -81,7 +81,7 @@ def print_timing(func):
 
         print(f"{timestamp},{timing},{interaction},{error_msg},{success}")
 
-        w3c_timing = json.dumps(webdriver.execute_script("return window.performance.getEntries()"))
+        w3c_timing = json.dumps(str(webdriver.execute_script("return window.performance.getEntries()")))
         with open(w3c_timings_file, "a+") as file:
             file.write(f"{{\"timestamp\": {timestamp}, \"timing\": {timing}, \"interation\": \"{interaction}\", "
                        f"\"error\": \"{error_msg}\", \"success\": \"{success}\", \"w3c_timing\": {w3c_timing}}}\n")
