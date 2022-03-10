@@ -10,7 +10,7 @@ from util.conf import JIRA_SETTINGS
 
 def view_issue_with_similar_issues(webdriver, datasets):
     page = BasePage(webdriver)
-    # Add custom_dataset_query: summary ~ testing to jira.yml file
+    # Add custom_dataset_query: summary ~ friendly to jira.yml file
     if datasets['custom_issues']:
         issue_key = datasets['custom_issue_key']
 
@@ -39,7 +39,7 @@ def view_issue_with_similar_issues(webdriver, datasets):
         def sub_measure():
             page.go_to_url(f"{JIRA_SETTINGS.server_url}/browse/{issue_key}?page=com.deniz.jira.similarissues:similar-issues-tab-panel")
             page.wait_until_visible((By.ID, "summary-val"))  # Wait for summary field visible
-            page.wait_until_visible((By.ID, "similar_issue_overlay_table"))  # Wait for you app-specific UI element by ID selector
+            page.wait_until_invisible((By.ID, "sim-loading"))  # Wait for you app-specific UI element by ID selector
         sub_measure()
     measure()
 
