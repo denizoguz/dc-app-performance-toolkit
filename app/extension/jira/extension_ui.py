@@ -10,6 +10,7 @@ from util.conf import JIRA_SETTINGS
 
 def view_issue_with_similar_issues(webdriver, datasets):
     page = BasePage(webdriver)
+    # Add custom_dataset_query: summary ~ testing to jira.yml file
     if datasets['custom_issues']:
         issue_key = datasets['custom_issue_key']
 
