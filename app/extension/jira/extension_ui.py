@@ -57,7 +57,7 @@ def view_issue_and_create_reminder(webdriver, datasets):
 
     @print_timing("selenium_app_custom_action")
     def measure():
-        @print_timing("selenium_app_custom_action:view_issue_with_reminder")
+        @print_timing("selenium_app_custom_action:view_issue")
         def sub_measure():
             page.go_to_url(f"{JIRA_SETTINGS.server_url}/browse/{issue_key}")
             page.wait_until_visible((By.ID, "summary-val"))  # Wait for summary field visible
@@ -65,8 +65,8 @@ def view_issue_and_create_reminder(webdriver, datasets):
 
         @print_timing("selenium_app_custom_action:create_reminder_open")
         def sub_measure():
-            page.wait_until_clickable((By.ID, 'add-reminder-for-jira-link')).click()
-            page.wait_until_visible((By.ID, "add-new-reminder"))  # Wait for reminder panel to be field visible
+            page.find_element_by_id('add-reminder-for-jira-link').click()
+            page.wait_until_visible((By.ID, "add-reminder-dialog-web-panel"))  # Wait for summary field visible
         sub_measure()
 
         @print_timing("selenium_app_custom_action:create_reminder_form_fill_and_submit")
@@ -80,7 +80,7 @@ def view_issue_and_create_reminder(webdriver, datasets):
             @print_timing("selenium_app_custom_action:create_reminder_form_submit")
             def sub_measure2():
                 page.wait_until_clickable((By.ID, "add-reminder-submit")).click()
-                page.wait_until_invisible((By.ID, "add-new-reminder"))
+                page.wait_until_invisible((By.ID, "add-reminder-dialog-web-panel"))
             sub_measure2()
         sub_measure()
     measure()
