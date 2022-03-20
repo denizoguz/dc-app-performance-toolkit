@@ -1,4 +1,5 @@
 import random
+import time
 
 from selenium.webdriver.common.by import By
 
@@ -42,3 +43,39 @@ def app_specific_action(webdriver, datasets):
         sub_measure()
     measure()
 
+
+def view_issue_and_create_reminder(webdriver, datasets):
+    page = BasePage(webdriver)
+
+    if datasets['custom_issues']:
+        issue_key = datasets['custom_issue_key']
+
+    @print_timing("selenium_app_custom_action")
+    def measure():
+        @print_timing("selenium_app_custom_action:view_issue")
+        def sub_measure():
+            page.go_to_url(f"{JIRA_SETTINGS.server_url}/browse/{issue_key}")
+            page.wait_until_visible((By.ID, "summary-val"))  # Wait for summary field visible
+        sub_measure()
+
+        @print_timing("selenium_app_custom_action:create_reminder_open")
+        def sub_measure():
+            page.find_element_by_id('add-reminder-for-jira-link').click()
+            page.wait_until_visible((By.ID, "add-reminder-dialog-web-panel"))  # Wait for summary field visible
+        sub_measure()
+
+        @print_timing("selenium_app_custom_action:create_reminder_form_fill_and_submit")
+        def sub_measure():
+            page.wait_until_clickable((By.ID, "add-reminder-summary")).send_keys(f"Testing reminder creation {time.time()}")
+
+            page.wait_until_clickable((By.ID, "add-reminder-comment")).send_keys(f"Description: {page.generate_random_string(100)} {time.time()}")
+
+            page.wait_until_clickable((By.ID, "add-reminder-date")).send_keys(f"31/Mar/29 11:04 AM")
+
+            @print_timing("selenium_app_custom_action:create_reminder_form_submit")
+            def sub_measure2():
+                page.wait_until_clickable((By.ID, "add-reminder-submit")).click()
+                page.wait_until_invisible((By.ID, "add-reminder-dialog-web-panel"))
+            sub_measure2()
+        sub_measure()
+    measure()
