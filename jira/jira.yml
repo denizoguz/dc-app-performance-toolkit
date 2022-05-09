@@ -4,7 +4,7 @@ settings:
   aggregator: consolidator
   verbose: false
   env:
-    application_hostname: dcstackloadbalancer-1554297165.eu-central-1.elb.amazonaws.com # Jira DC hostname without protocol and port e.g. test-jira.atlassian.com or localhost
+    application_hostname: dcstack-1220774374.eu-central-1.elb.amazonaws.com
     application_protocol: http # http or https
     application_port: 80 # 80, 443, 8080, 2990, etc
     application_postfix: # e.g. /jira in case of url like http://localhost:2990/jira
@@ -85,5 +85,5 @@ modules:
   selenium:
     chromedriver:
       #this is just the driver, actual browser is /usr/bin/chromium-browser. Version of two should match.
-      version: "86.0.4240.22" # auto downloaded by bzt to .bzt folder
+      #      version: "86.0.4240.22" # auto downloaded by bzt to .bzt folder
 
