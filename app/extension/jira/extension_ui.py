@@ -26,17 +26,70 @@ def view_issue_with_wp_worklog_tab(webdriver, datasets):
     measure()
 
 
-def view_weekly_project_timesheet(webdriver, datasets):
+def view_weekly_user_timesheet(webdriver, datasets):
     page = BasePage(webdriver)
 
     @print_timing("selenium_app_custom_action")
     def measure():
-        @print_timing("selenium_app_custom_action:view_weekly_project_timesheet")
+        @print_timing("selenium_app_custom_action:view_weekly_user_timesheet")
         def sub_measure():
             page.go_to_url(f"{JIRA_SETTINGS.server_url}/secure/WPShowTimesheetAction!customTimesheet.jspa?periodMode=WEEK&targetType=USER&calendarType=CUSTOM&groupingType=ISSUE"
                            f"#targetType=USER&targetKey=currentUser()&groupingType=Project,"
                            f"Issue&periodMode=PERIOD&startDate=2020-09-02&endDate=2020-09-08&&&periodLocked=false&calendarType=CUSTOM&saveToUserHistory=false&extraIssueFilter=&showIssuesWithoutWorklog=false&viewType=TIMESHEET")
             page.wait_until_visible((By.CSS_SELECTOR, "p.wp-weekly-total"))  # Wait for you app-specific UI element by ID selector
+        sub_measure()
+    measure()
+
+
+def view_monthly_user_timesheet(webdriver, datasets):
+    page = BasePage(webdriver)
+
+    @print_timing("selenium_app_custom_action")
+    def measure():
+        @print_timing("selenium_app_custom_action:view_monthly_user_timesheet")
+        def sub_measure():
+            page.go_to_url(f"{JIRA_SETTINGS.server_url}/secure/WPShowTimesheetAction!customTimesheet.jspa?periodMode=WEEK&targetType=USER&calendarType=CUSTOM&groupingType=ISSUE#targetType=USER&targetKey=currentUser()&groupingType=Project,Issue&periodMode=MONTH&startDate=2020-09-01&endDate=2020-09-30&&&periodLocked=false&calendarType=CUSTOM&saveToUserHistory=false&extraIssueFilter=&showIssuesWithoutWorklog=false&viewType=TIMESHEET")
+            page.wait_until_visible((By.CSS_SELECTOR, "p.wp-weekly-total"))  # Wait for you app-specific UI element by ID selector
+        sub_measure()
+    measure()
+
+
+def view_monthly_project_timesheet(webdriver, datasets):
+    page = BasePage(webdriver)
+
+    @print_timing("selenium_app_custom_action")
+    def measure():
+        @print_timing("selenium_app_custom_action:view_monthly_project_timesheet")
+        def sub_measure():
+            page.go_to_url(f"{JIRA_SETTINGS.server_url}/secure/WPShowTimesheetAction!customTimesheet.jspa?periodMode=WEEK&targetType=USER&calendarType=CUSTOM&groupingType=ISSUE#targetType=PROJECT&targetKey=AANES&groupingType=Project%2CUser%2CIssue&periodMode=MONTH&startDate=2020-09-01&endDate=2020-09-30&periodLocked=false&calendarType=CUSTOM&saveToUserHistory=false&extraIssueFilter=&showIssuesWithoutWorklog=false&viewType=TIMESHEET")
+            page.wait_until_visible((By.CSS_SELECTOR, "p.wp-weekly-total"))  # Wait for you app-specific UI element by ID selector
+        sub_measure()
+    measure()
+
+
+def view_approve_timesheet(webdriver, datasets):
+    page = BasePage(webdriver)
+
+    @print_timing("selenium_app_custom_action")
+    def measure():
+        @print_timing("selenium_app_custom_action:view_approve_timesheet")
+        def sub_measure():
+            page.go_to_url(f"{JIRA_SETTINGS.server_url}/secure/WorklogPROConfigurationAction!displayTimesheetApproval.jspa#selectedPeriodId=157&groupingType=project")
+            page.wait_until_visible((By.ID, "wp-modal-dialog"))
+            page.wait_until_clickable((By.LINK_TEXT, 'Default')).click()
+        sub_measure()
+    measure()
+
+
+def view_worklog_calendar(webdriver, datasets):
+    page = BasePage(webdriver)
+
+    @print_timing("selenium_app_custom_action")
+    def measure():
+        @print_timing("selenium_app_custom_action:view_worklog_calendar")
+        def sub_measure():
+            page.go_to_url(f"{JIRA_SETTINGS.server_url}/secure/WorklogPROWorklogCalendar!default.jspa?targetUsername=currentUser()&startDate=2020-10-04&viewType=agendaWeek")
+            page.wait_until_visible((By.ID, "wp-fullcalendar"))
         sub_measure()
     measure()
 
