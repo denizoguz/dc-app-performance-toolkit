@@ -25,6 +25,7 @@ def view_issue_with_similar_issues(webdriver, datasets):
         sub_measure()
     measure()
 
+
 def view_weekly_project_timesheet(webdriver, datasets):
     page = BasePage(webdriver)
 
