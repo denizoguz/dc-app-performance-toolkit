@@ -8,7 +8,7 @@ from selenium_ui.jira.pages.pages import Login
 from util.conf import JIRA_SETTINGS
 
 
-def view_issue_with_similar_issues(webdriver, datasets):
+def view_issue_with_wp_worklog_tab(webdriver, datasets):
     page = BasePage(webdriver)
     # Add custom_dataset_query: worklogAuthor is not EMPTY to jira.yml file
     if datasets['custom_issues']:
