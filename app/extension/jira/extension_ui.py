@@ -37,6 +37,7 @@ def view_weekly_user_timesheet(webdriver, datasets):
                            f"#targetType=USER&targetKey=currentUser()&groupingType=Project,"
                            f"Issue&periodMode=PERIOD&startDate=2020-09-02&endDate=2020-09-08&&&periodLocked=false&calendarType=CUSTOM&saveToUserHistory=false&extraIssueFilter=&showIssuesWithoutWorklog=false&viewType=TIMESHEET")
             page.wait_until_invisible((By.CSS_SELECTOR, "div.waitMe"))  # Wait for you app-specific UI element by ID selector
+            page.wait_until_visible((By.CSS_SELECTOR, "p.wp-weekly-total"))  # Wait for you app-specific UI element by ID selector
         sub_measure()
     measure()
 
@@ -77,6 +78,7 @@ def view_approve_timesheet(webdriver, datasets):
             page.go_to_url(f"{JIRA_SETTINGS.server_url}/secure/WorklogPROConfigurationAction!displayTimesheetApproval.jspa#selectedPeriodId=157&groupingType=project")
             page.wait_until_visible((By.ID, "wp-modal-dialog"))
             page.wait_until_clickable((By.LINK_TEXT, 'Default')).click()
+            page.wait_until_visible((By.ID, "wp-approval-table-tree"))
         sub_measure()
     measure()
 
