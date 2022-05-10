@@ -25,7 +25,7 @@ def view_issue_with_similar_issues(webdriver, datasets):
         sub_measure()
     measure()
 
-def view_issue_with_similar_issues(webdriver, datasets):
+def view_weekly_project_timesheet(webdriver, datasets):
     page = BasePage(webdriver)
 
     @print_timing("selenium_app_custom_action")
