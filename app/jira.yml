@@ -37,7 +37,8 @@ settings:
     browse_boards: 1
     standalone_extension: 0 # By default disabled
     # Custom dataset section.
-    custom_dataset_query:          # Write JQL query to add JQL output to the app/datasets/jira/custom-issues.csv, e.g. "summary ~ 'AppIssue*'"
+    #custom_dataset_query: project in (ERP,AMLISA,CSPAS,CZNSIA,AEBII,AOLE,CTIRAA,CPMOAA,CHPISA,BRDUAA,APAER,AAFAIA,CBSSIA,BSTISA,ATEBA,ATNTI,BAORS,CTNNIA,OENS,CNIAA,BBSWI,OUNS,CMATM,BDESS,CPIFIA,ABYRAA,CDIAIA,CPTUS,SECI,CLPTA,ADURS,AACIMA,CCZES,CSUNI,CVEGSA,BPETS,ACURSA,AGTISA,CSPOAA,ASHUIA,CCNASA,CVERSA,CAENAA,BMAUA,BPAYIA,BOENXA,AEDEIA,AAANI,AAAPSA,AABIS)          # Write JQL query to add JQL output to the app/datasets/jira/custom-issues.csv, e.g. "summary ~ 'AppIssue*'"
+    custom_dataset_query: project in (ERP) AND component is not EMPTY         # Write JQL query to add JQL output to the app/datasets/jira/custom-issues.csv, e.g. "summary ~ 'AppIssue*'"
 services:
   - module: shellexec
     prepare:
