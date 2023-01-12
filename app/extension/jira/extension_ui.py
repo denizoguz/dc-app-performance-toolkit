@@ -71,6 +71,12 @@ def app_specific_action(webdriver, datasets):
             page.wait_until_clickable((By.ID, "cbsv-subcomponents-dialog-trigger")).click()
             page.wait_until_visible((By.ID, "cbsv-subcomponents-tree"))
             page.wait_until_clickable((By.CSS_SELECTOR, ".fancytree-node:not(.fancytree-folder) .fancytree-checkbox")).click()
+            page.wait_until_clickable((By.ID, "cbsv-subcomponents-select")).click()
+            page.wait_until_clickable((By.ID, "resolution")).click()
+            from selenium.webdriver.support.select import Select
+            select = Select(page.wait_until_visible((By.ID, "resolution")))
+            select.select_by_value("10000")
+
 
             @print_timing("selenium_app_custom_action:subcomponents:edit_issue_with_subcomponents:save_edit_issue_form")
             def sub_measure():
