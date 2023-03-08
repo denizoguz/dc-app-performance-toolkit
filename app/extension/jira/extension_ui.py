@@ -6,6 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium_ui.base_page import BasePage
 from selenium_ui.conftest import print_timing
 from selenium_ui.jira.pages.pages import Issue, PopupManager
+from selenium_ui.jira.pages.selectors import IssueLocators
 
 from util.api.jira_clients import JiraRestClient
 from util.conf import JIRA_SETTINGS
@@ -106,28 +107,11 @@ def app_specific_action(webdriver, datasets):
             page.wait_until_visible((By.CSS_SELECTOR, "#cbsv-subprojects-tree"))  # Wait for tree to be visible
         measure_get_subprojects_page()
 
-        @print_timing("selenium_app_custom_action:subprojects:create_issue_with_subprojects")
-        def edit_issue():
-            issue_modal = Issue(webdriver)
-            page.wait_until_clickable((By.LINK_TEXT, "Create")).click()  # Click on Create issue link
-            page.wait_until_clickable((By.ID, "cbsv-subprojects-dialog-trigger")).click()
-            page.wait_until_visible((By.CSS_SELECTOR, "#create-issue-dialog #cbsv-subprojects-tree-issue"))
-            page.wait_until_visible((By.CSS_SELECTOR, "#create-issue-dialog .fancytree-node:not(.fancytree-folder) span.fancytree-title")).click()
-            page.wait_until_invisible((By.CSS_SELECTOR, "span.loading"))
-            issue_modal.fill_summary_create()  # Fill summary field
-            issue_modal.fill_description_create(rte_status)  # Fill description field
-            issue_modal.assign_to_me()  # Click assign to me
-            issue_modal.set_resolution()  # Set resolution if there is such field
-            issue_modal.set_issue_type()  # Set issue type, use non epic type
-            issue_modal.submit_issue()  # Submit the dialog
-        edit_issue()
-    measure_subprojects()
-    PopupManager(webdriver).dismiss_default_popup()
-
     @print_timing("selenium_app_custom_action:release_calendar")
     def measure_release_calendar():
         page.go_to_url(f"{JIRA_SETTINGS.server_url}/projects/{project_key}?selectedItem=com.deniz.jira.versioning:cbsv-configuration-management-release-calendar-panel")
         page.wait_until_visible((By.CSS_SELECTOR, "#component-release-calendar"))  # Wait for tree to be visible
     measure_release_calendar()
+
 
 
