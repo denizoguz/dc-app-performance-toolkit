@@ -47,8 +47,11 @@ def app_specific_action(webdriver, datasets):
 def view_issue_and_create_reminder(webdriver, datasets):
     page = BasePage(webdriver)
 
+    issue_key = "MHTS-129"
     if datasets['custom_issues']:
         issue_key = datasets['custom_issue_key']
+
+    print(f"Viewing issue {issue_key} and creating reminder")
 
     @print_timing("selenium_app_custom_action")
     def measure():
