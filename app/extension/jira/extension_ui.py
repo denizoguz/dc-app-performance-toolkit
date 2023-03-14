@@ -47,11 +47,8 @@ def app_specific_action(webdriver, datasets):
 def view_issue_and_create_reminder(webdriver, datasets):
     page = BasePage(webdriver)
 
-    issue_key = "MHTS-129"
     if datasets['custom_issues']:
         issue_key = datasets['custom_issue_key']
-
-    print(f"Viewing issue {issue_key} and creating reminder")
 
     @print_timing("selenium_app_custom_action")
     def measure():
@@ -64,7 +61,7 @@ def view_issue_and_create_reminder(webdriver, datasets):
         @print_timing("selenium_app_custom_action:create_reminder_open")
         def sub_measure():
             page.wait_until_clickable((By.ID, 'add-reminder-for-jira-link')).click()
-            page.wait_until_visible((By.ID, "add-reminder-dialog-web-panel"))  # Wait for summary field visible
+            page.wait_until_visible((By.ID, "add-new-reminder"))  # Wait for reminder panel to be field visible
         sub_measure()
 
         @print_timing("selenium_app_custom_action:create_reminder_form_fill_and_submit")
@@ -78,7 +75,7 @@ def view_issue_and_create_reminder(webdriver, datasets):
             @print_timing("selenium_app_custom_action:create_reminder_form_submit")
             def sub_measure2():
                 page.wait_until_clickable((By.ID, "add-reminder-submit")).click()
-                page.wait_until_invisible((By.ID, "add-reminder-dialog-web-panel"))
+                page.wait_until_invisible((By.ID, "add-new-reminder"))
             sub_measure2()
         sub_measure()
     measure()
