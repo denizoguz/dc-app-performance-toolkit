@@ -116,7 +116,8 @@ def app_specific_action(webdriver, datasets):
                 print("clicked on subprojects dialog trigger")
                 page.wait_until_visible((By.CSS_SELECTOR, "#create-issue-dialog #cbsv-subprojects-tree-issue"))
                 print("subprojects tree is visible")
-                page.wait_until_visible((By.CSS_SELECTOR, "#create-issue-dialog .fancytree-node:not(.fancytree-folder) span.fancytree-title")).click()
+                page.wait_until_visible((By.CSS_SELECTOR, "#create-issue-dialog .fancytree-node:not(.fancytree-folder) span.fancytree-title"))
+                page.wait_until_clickable((By.CSS_SELECTOR, "#create-issue-dialog .fancytree-node:not(.fancytree-folder) span.fancytree-title")).click()
                 print("clicked on a subproject")
                 page.wait_until_invisible(IssueLocators.issue_ready_to_save_spinner)
                 issue_modal.set_issue_type()  # Set issue type, use non epic type
