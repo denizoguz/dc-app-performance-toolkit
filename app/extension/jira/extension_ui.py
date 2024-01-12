@@ -117,6 +117,7 @@ def app_specific_action(webdriver, datasets):
                 page.wait_until_visible((By.CSS_SELECTOR, "#create-issue-dialog #cbsv-subprojects-tree-issue"))
                 print("subprojects tree is visible")
                 page.wait_until_visible((By.CSS_SELECTOR, "#create-issue-dialog .fancytree-node:not(.fancytree-folder) span.fancytree-title"))
+                print("subprojects tree node is visible")
                 page.wait_until_clickable((By.CSS_SELECTOR, "#create-issue-dialog .fancytree-node:not(.fancytree-folder) span.fancytree-title")).click()
                 print("clicked on a subproject")
                 page.wait_until_invisible(IssueLocators.issue_ready_to_save_spinner)
