@@ -116,6 +116,7 @@ def app_specific_action(webdriver, datasets):
                 print("clicked on subprojects dialog trigger")
                 page.wait_until_visible((By.CSS_SELECTOR, "#create-issue-dialog #cbsv-subprojects-tree-issue"))
                 print("subprojects tree is visible")
+                time.sleep(0.5)
                 page.wait_until_visible((By.CSS_SELECTOR, "#create-issue-dialog .fancytree-node:not(.fancytree-folder) span.fancytree-title"))
                 print("subprojects tree node is visible")
                 page.wait_until_clickable((By.CSS_SELECTOR, "#create-issue-dialog .fancytree-node:not(.fancytree-folder) span.fancytree-title")).click()
