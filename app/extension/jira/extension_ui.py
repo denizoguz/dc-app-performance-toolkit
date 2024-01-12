@@ -114,8 +114,8 @@ def app_specific_action(webdriver, datasets):
             page.wait_until_clickable((By.ID, "cbsv-subprojects-dialog-trigger")).click()
             page.wait_until_visible((By.CSS_SELECTOR, "#create-issue-dialog #cbsv-subprojects-tree-issue"))
             page.wait_until_visible((By.CSS_SELECTOR, "#create-issue-dialog .fancytree-node:not(.fancytree-folder) span.fancytree-title")).click()
-            page.wait_until_visible(IssueLocators.issue_ready_to_save_spinner)
             page.wait_until_invisible(IssueLocators.issue_ready_to_save_spinner)
+            time.sleep(0.5)
             issue_modal.set_issue_type()  # Set issue type, use non epic type
             page.wait_until_invisible(IssueLocators.issue_ready_to_save_spinner)
             issue_modal.fill_summary_create()  # Fill summary field
