@@ -113,8 +113,11 @@ def app_specific_action(webdriver, datasets):
                 issue_modal = Issue(webdriver)
                 page.wait_until_clickable((By.LINK_TEXT, "Create")).click()  # Click on Create issue link
                 page.wait_until_clickable((By.ID, "cbsv-subprojects-dialog-trigger")).click()
+                print("clicked on subprojects dialog trigger")
                 page.wait_until_visible((By.CSS_SELECTOR, "#create-issue-dialog #cbsv-subprojects-tree-issue"))
+                print("subprojects tree is visible")
                 page.wait_until_visible((By.CSS_SELECTOR, "#create-issue-dialog .fancytree-node:not(.fancytree-folder) span.fancytree-title")).click()
+                print("clicked on a subproject")
                 page.wait_until_invisible(IssueLocators.issue_ready_to_save_spinner)
                 issue_modal.set_issue_type()  # Set issue type, use non epic type
                 page.wait_until_invisible(IssueLocators.issue_ready_to_save_spinner)
@@ -130,6 +133,7 @@ def app_specific_action(webdriver, datasets):
                 webdriver.save_screenshot(screenshot_name)
                 print(f"Screenshot saved as {screenshot_name}")
                 print(f"Exception in create issue with subprojects: {e}")
+                throw e
         edit_issue()
     measure_subprojects()
     PopupManager(webdriver).dismiss_default_popup()
