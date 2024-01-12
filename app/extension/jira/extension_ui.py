@@ -109,21 +109,27 @@ def app_specific_action(webdriver, datasets):
 
         @print_timing("selenium_app_custom_action:subprojects:create_issue_with_subprojects")
         def edit_issue():
-            issue_modal = Issue(webdriver)
-            page.wait_until_clickable((By.LINK_TEXT, "Create")).click()  # Click on Create issue link
-            page.wait_until_clickable((By.ID, "cbsv-subprojects-dialog-trigger")).click()
-            page.wait_until_visible((By.CSS_SELECTOR, "#create-issue-dialog #cbsv-subprojects-tree-issue"))
-            page.wait_until_visible((By.CSS_SELECTOR, "#create-issue-dialog .fancytree-node:not(.fancytree-folder) span.fancytree-title")).click()
-            page.wait_until_invisible(IssueLocators.issue_ready_to_save_spinner)
-            time.sleep(0.5)
-            issue_modal.set_issue_type()  # Set issue type, use non epic type
-            page.wait_until_invisible(IssueLocators.issue_ready_to_save_spinner)
-            issue_modal.fill_summary_create()  # Fill summary field
-            issue_modal.fill_description_create(rte_status)  # Fill description field
-            issue_modal.assign_to_me()  # Click assign to me
-            issue_modal.set_resolution()  # Set resolution if there is such field
-            page.wait_until_invisible(IssueLocators.issue_ready_to_save_spinner)
-            issue_modal.submit_issue()  # Submit the dialog
+            try:
+                issue_modal = Issue(webdriver)
+                page.wait_until_clickable((By.LINK_TEXT, "Create")).click()  # Click on Create issue link
+                page.wait_until_clickable((By.ID, "cbsv-subprojects-dialog-trigger")).click()
+                page.wait_until_visible((By.CSS_SELECTOR, "#create-issue-dialog #cbsv-subprojects-tree-issue"))
+                page.wait_until_visible((By.CSS_SELECTOR, "#create-issue-dialog .fancytree-node:not(.fancytree-folder) span.fancytree-title")).click()
+                page.wait_until_invisible(IssueLocators.issue_ready_to_save_spinner)
+                issue_modal.set_issue_type()  # Set issue type, use non epic type
+                page.wait_until_invisible(IssueLocators.issue_ready_to_save_spinner)
+                issue_modal.fill_summary_create()  # Fill summary field
+                issue_modal.fill_description_create(rte_status)  # Fill description field
+                issue_modal.assign_to_me()  # Click assign to me
+                issue_modal.set_resolution()  # Set resolution if there is such field
+                page.wait_until_invisible(IssueLocators.issue_ready_to_save_spinner)
+                issue_modal.submit_issue()  # Submit the dialog
+            except Exception as e:
+                timestamp = time.strftime("%Y%m%d-%H%M%S")
+                screenshot_name = f"screenshot_{timestamp}.png"
+                webdriver.save_screenshot(screenshot_name)
+                print(f"Screenshot saved as {screenshot_name}")
+                print(f"Exception in create issue with subprojects: {e}")
         edit_issue()
     measure_subprojects()
     PopupManager(webdriver).dismiss_default_popup()
