@@ -133,7 +133,7 @@ def app_specific_action(webdriver, datasets):
                 webdriver.save_screenshot(screenshot_name)
                 print(f"Screenshot saved as {screenshot_name}")
                 print(f"Exception in create issue with subprojects: {e}")
-                throw e
+                raise e
         edit_issue()
     measure_subprojects()
     PopupManager(webdriver).dismiss_default_popup()
