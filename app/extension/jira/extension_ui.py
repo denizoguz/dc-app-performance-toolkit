@@ -69,7 +69,7 @@ def app_specific_action(webdriver, datasets):
         def edit_issue():
             page.go_to_url(f"{JIRA_SETTINGS.server_url}/browse/{issue_key}")
             page.wait_until_clickable((By.ID, "edit-issue")).click()  # Click on edit
-            page.wait_until_clickable((By.ID, "cbsv-subcomponents-dialog-trigger")).click()
+            page.wait_until_clickable((By.CSS_SELECTOR, ".cbsv-subcomponents-dialog-trigger")).click()
             page.wait_until_visible((By.ID, "cbsv-subcomponents-tree"))
             page.wait_until_clickable((By.CSS_SELECTOR, ".fancytree-node:not(.fancytree-folder) .fancytree-checkbox")).click()
             page.wait_until_clickable((By.ID, "cbsv-subcomponents-select")).click()
