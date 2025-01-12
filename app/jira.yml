@@ -24,18 +24,18 @@ settings:
     environment_compliance_check: True # Pre-test environment compliance validation. Set to "False" to skip it.
     # Action percentage for Jmeter and Locust load executors
     create_issue: 4
-    search_jql: 11
-    view_issue: 34
+    search_jql: 10
+    view_issue: 32
     view_project_summary: 3
     view_dashboard: 10
     edit_issue: 5
     add_comment: 2
     browse_projects: 9
-    view_scrum_board: 8
-    view_kanban_board: 7
+    view_scrum_board: 7
+    view_kanban_board: 6
     view_backlog: 6
     browse_boards: 1
-    standalone_extension: 0 # By default disabled
+    standalone_extension: 5 # By default disabled
     # Custom dataset section.
     #custom_dataset_query: project in (ERP,AMLISA,CSPAS,CZNSIA,AEBII,AOLE,CTIRAA,CPMOAA,CHPISA,BRDUAA,APAER,AAFAIA,CBSSIA,BSTISA,ATEBA,ATNTI,BAORS,CTNNIA,OENS,CNIAA,BBSWI,OUNS,CMATM,BDESS,CPIFIA,ABYRAA,CDIAIA,CPTUS,SECI,CLPTA,ADURS,AACIMA,CCZES,CSUNI,CVEGSA,BPETS,ACURSA,AGTISA,CSPOAA,ASHUIA,CCNASA,CVERSA,CAENAA,BMAUA,BPAYIA,BOENXA,AEDEIA,AAANI,AAAPSA,AABIS)          # Write JQL query to add JQL output to the app/datasets/jira/custom-issues.csv, e.g. "summary ~ 'AppIssue*'"
     custom_dataset_query: project in (AMLISA,CSPAS,CZNSIA,AEBII,AOLE,CTIRAA,CPMOAA,CHPISA,BRDUAA,APAER,AAFAIA,CBSSIA,BSTISA,ATEBA,ATNTI,BAORS,CTNNIA,OENS,CNIAA,BBSWI,OUNS,CMATM,BDESS,CPIFIA,ABYRAA,CDIAIA,CPTUS,SECI,CLPTA,ADURS,AACIMA,CCZES,CSUNI,CVEGSA,BPETS,ACURSA,AGTISA,CSPOAA,ASHUIA,CCNASA,CVERSA,CAENAA,BMAUA,BPAYIA,BOENXA,AEDEIA,AAANI,AAAPSA,AABIS) AND component is not EMPTY AND status != Closed   # Write JQL query to add JQL output to the app/datasets/jira/custom-issues.csv, e.g. "summary ~ 'AppIssue*'"
