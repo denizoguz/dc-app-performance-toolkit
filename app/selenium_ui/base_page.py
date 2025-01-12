@@ -144,6 +144,13 @@ class BasePage:
     def execute_js(self, js):
         return self.driver.execute_script(js)
 
+    def rest_api_get(self, url):
+        return self.execute_js(js=f"""
+        return fetch('{url}')
+                    .then(response => response.json())
+                    .then(data => data);
+        """)
+
     @property
     def app_version(self):
         return self.driver.app_version if 'app_version' in dir(self.driver) else None
@@ -151,6 +158,10 @@ class BasePage:
     @staticmethod
     def generate_random_string(length):
         return "".join([random.choice(string.digits + string.ascii_letters + ' ') for _ in range(length)])
+
+    @staticmethod
+    def generate_no_whitespace_string(length):
+        return "".join([random.choice(string.digits + string.ascii_letters) for _ in range(length)])
 
     def select(self, element):
         return Select(element)
@@ -160,6 +171,9 @@ class BasePage:
 
     def delete_all_cookies(self):
         self.driver.delete_all_cookies()
+
+    def scroll_down_till_bottom(self):
+        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
 
 
 class AnyEc:
