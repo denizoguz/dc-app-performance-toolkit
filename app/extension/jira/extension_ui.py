@@ -29,10 +29,10 @@ def app_specific_action(webdriver, datasets):
         measure_get_bundles()
 
         @print_timing("selenium_app_custom_action:bundles:get_bundle_details")
-        def measure_get_bunle_content():
+        def measure_get_bundle_content():
             page.wait_until_clickable((By.CSS_SELECTOR, "span[aria-label='Expand']")).click()
             page.wait_until_visible((By.CSS_SELECTOR, "span[aria-label='Collapse']"))  # Wait for toggle symbol change
-        measure_get_bunle_content()
+        measure_get_bundle_content()
     measure_bundles()
 
     @print_timing("selenium_app_custom_action:component_versions")
